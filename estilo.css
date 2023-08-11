@@ -1,0 +1,543 @@
+/*FUENTES*/
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Permanent+Marker&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+
+
+/*VARIABLES*/
+
+:root{
+	--bg-body: #1f212c;
+	--primary-color: #125bff;
+	--fonSize-title: 40px; 
+	--fonSize-parrafos: 20px; 
+
+}
+html{
+	scroll-behavior:smooth;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+
+p,li,td,a,label,input{
+	font-family: 'Work Sans', sans-serif;
+}
+
+body{
+	background-color: var(--bg-body);
+}
+
+header{
+	padding-top: 20px;
+}
+
+
+nav.bg-gym{
+	background: var(--bg-body);
+}
+
+nav .navbar-brand img{
+	width: 200px;
+}
+
+nav .navbar-collapse ul li a{
+	margin-top: 7px;
+	margin-left: 12px;
+}
+
+nav .navbar-collapse ul li a{
+	color: #fff;
+	position: relative;
+	font-size: 18px;
+	transition: .4s
+}
+
+
+nav .navbar-collapse ul li a::after{
+	width: 0%;
+	height: 2px;
+	background-color: transparent;
+	content: "";
+	position: absolute;
+	bottom: 2px;
+	left: 10px;
+	transition: .4s;
+}
+
+nav .navbar-collapse ul li a:hover{
+	color: var(--primary-color);
+}
+
+nav .navbar-collapse ul li a:hover::after{
+	background : var(--primary-color);
+	width: 40%;
+}
+
+nav .navbar-collapse ul li a.login{
+	margin-left: 280px;
+	margin-right: 30px;
+}
+
+nav .navbar-collapse ul li a.registro{
+	display: block;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+	background-color: var(--primary-color);
+	color: #fff;
+	border-radius: 4px;
+	transition: .4s;
+}
+
+nav .navbar-collapse ul li a.registro:hover{
+	background-color: transparent;
+	color: var(--primary-color);
+	border: 0 transparent;
+}
+
+
+#hero{
+	padding: 180px;
+
+}
+
+#hero .cont-foto{
+	position: relative;
+	width: 400px;
+}
+
+#hero .cont-foto img{
+	z-index: 200;
+	position: relative;
+	width: 400px;
+
+}
+
+#hero .cont-foto::before{
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	top: -40px;
+	left: 40px;
+	background-color: var(--primary-color);	
+	z-index: 60;
+}
+#hero .cont-info{
+	color: #fff;
+}
+
+
+#hero .cont-info h1{
+	font-size: 60px;
+	margin-bottom: 35px;
+	font-weight: 600;
+}
+
+#hero .cont-info h1 span{
+	border-bottom: 10px solid #fff;
+}
+
+#hero .cont-info p{
+	font-size: 20px; 
+	margin-bottom: 50px;
+	color: #c6c6c6;
+}
+
+#hero .cont-info .destacada h2{
+	font-size: 40px;
+}
+
+#hero .cont-info .destacada p{
+	font-size: 16px;
+	color: #c6c6c6;
+}
+
+#servicios{
+	width: 100%;
+	position: relative;
+	text-align: center;
+	padding: 40px 0px 100px 0px;
+}
+
+#servicios h2{
+	color: #fff;
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+
+#servicios p{
+	color: #c6c6c6;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+#servicios .row{
+	padding-top: 50px;
+}
+
+#servicios .card-services{
+	background-color: #292c36;
+	position: relative;
+	border-radius: 4px;
+	padding-top: 70px; 
+	padding-left: 35px; 
+	padding-right: 35px;
+	padding-bottom: 40px;
+	text-align: left;
+	transition: .4s;
+	max-width: 270px;
+	margin: 0 auto;
+	margin-bottom: 70px;
+}
+
+#servicios .card-services:hover{
+	background-color: var(--primary-color);
+}
+
+
+#servicios .card-services img{
+	background-color: #fff;
+	width:65px;
+	padding: 10px;
+	border-radius: 4px;
+	position: absolute;
+	top: -40px;
+	left: 35px;
+}
+
+#servicios .card-services h3{
+	color: #fff;
+	text-align: right;
+	margin-bottom: 22px;
+
+}
+
+#servicios .card-services h4{
+	color: #fff;
+	font-weight: 600;
+	font-size: 18px;
+	margin-bottom: 22px;
+
+}
+
+#servicios .card-services p{
+	color: #c6c6c6;
+	font-size: 15px;
+	line-height: 20px;
+
+}
+
+#servicios .card-services a{
+	color: #c6c6c6;
+	text-decoration: none;
+}
+
+/*DESTACADAS*/
+
+#cdestacadas{
+	width: 100%;
+	position: relative;
+	padding: 50px 0 70px;
+}
+
+#cdestacadas h2{
+	font-size: var(--fonSize-title);
+	color: #fff;
+	font-weight: 700;
+	position: relative;
+	margin-bottom: 70px;
+}
+
+#cdestacadas h2::after{
+	width: 70%;
+	background-color: #fff;
+	height: 3px;
+	position: absolute;
+	content: "";
+	right: 0;
+	top: 52%;
+
+}
+
+#cdestacadas .card-destacadas{
+	position: relative;
+	border-radius: 3px;
+	padding: 50px ;
+
+}
+#cdestacadas img{
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+
+}
+
+#cdestacadas .card-destacadas .cont-info{
+	background-color: #292c36;
+	padding: 14px;
+	transition: .4s;
+	border-radius: 0 0 4px 4px;
+
+}
+#cdestacadas .card-destacadas .cont-info:hover{
+	background-color: var(--primary-color)
+}
+
+#cdestacadas .card-destacadas .cont-info h3{
+	font-size: 25px;
+	color: #fff;
+	font-weight: 600;
+}
+
+#cdestacadas .card-destacadas .cont-info p{
+	color: #c6c6c6;
+	font-size: 17px;
+}
+
+/*PLANES*/
+
+#planes{
+	width: 100%;
+	position: relative;
+	padding: 30px 0 100px;
+	text-align: center;
+}
+
+
+#planes h2{
+	color: #fff;
+	font-size: var(--fonSize-title);
+	font-weight: 600;
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+
+#planes p{
+	color: #c6c6c6;
+	font-size: 20px;
+}
+#planes .lapso{
+	background-color: #292c36;
+	padding: 50px 70px;
+	border-radius: 20px;
+	margin-top: 50px;
+	text-align: left;
+}
+
+#planes .lapso ul{
+	background-color: #3f434f;
+	margin-bottom: 40px;
+	border: 0 transparent;
+	border-radius: 60px;
+	max-width: 210px;
+	padding: 10px 5px 10px 14px;
+}
+
+#planes .lapso ul li button{
+	background-color: transparent;
+	color: #fff;
+	width: 100%;
+	border-radius: 30px;
+	border: 0 transparent;
+}
+#planes .lapso ul li button.active{
+	background-color: var(--primary-color);
+}
+
+#planes .lapso p{
+	margin-bottom: 40px;
+	position: relative;
+}
+
+#planes .lapso p::after{
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background-color: var(--primary-color);
+	border-radius: 10px;
+	top: 10px;
+	right: 0px;
+}
+
+#planes .plan{
+	background: transparent;
+	padding-top: 22px;
+}
+
+#planes .plan .accordion{
+	background-color: transparent;
+}
+#planes .plan .accordion-item,#planes .plan .accordion-item button{
+	background-color: transparent;
+}
+
+#planes .plan .accordion-item{
+	border-radius: 20px;
+	margin: 30px;
+	border: 1px solid #fff;
+}
+#planes .plan .accordion-item button{
+	color: #fff;
+	box-shadow: 0 0 0 transparent;
+	padding: 50px;
+	border-radius: 20px;
+}
+#planes .plan .accordion-item button.accordion-button{
+	background-color: var(--primary-color);
+}
+
+#planes .plan .accordion-item button.accordion-button.collapsed{
+	background-color: transparent;
+}
+
+#planes .plan h2{
+	margin: 0;
+	padding: 0; 
+	color: #fff;
+	font-size: 25px;
+
+}
+
+#planes .plan .accordion-body{
+	color: #fff;
+	font-size: var(--fonSize-parrafos);
+}
+
+
+
+/*COMENTARIOS*/
+
+
+#comentarios{
+	text-align: center;
+	width: 100%;
+	position: relative;
+	padding: 50px 0 150px;
+	color: #fff;
+}
+
+#comentarios .carousel-item{
+	background-color: var(--primary-color);
+	padding: 120px 120px;
+	border-radius: 20px;
+
+}
+
+#comentarios .carousel-item h3{
+	font-size: 40px;
+}
+
+.carousel-control-prev-icon{
+	margin-right: 70px;
+}
+.carousel-control-next-icon{
+	margin-left: 70px;
+}
+
+#comentario button{
+	width: 10px 40px;
+	background-color: red;
+}
+
+#comentarios .carousel-item button{
+	width: 10PX 40px;
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	font-size: 22px;
+	border-radius: 10px;
+	margin-top: 30px; 
+	margin-right: 20px
+	transition: .4s;
+}
+
+#comentarios .carousel-item button.btn-2{
+	width: 12px 40px;
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	font-size: 22px;
+	border-radius: 10px;
+	margin-top: 30px; 
+	margin-left: 20px;
+	transition: .4s;
+}
+
+#comentarios .carousel-item button:hover,
+#comentarios .carousel-item button.btn-2:hover{
+	background-color: #fff;
+	color: var(--primary-color);
+}
+
+
+/*FOOTER*/
+
+footer{
+	padding: 20PX;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	color: #fff;
+	background-color: #292c36;
+
+}
+footer img{
+	width: 220px;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (min-width:320px) and (max-width:990px){
+	header nav .navbar-toggler {
+		background-color: var(--primary-color);
+	}
+	nav .navbar-collapse ul li a.login{
+		margin-left: 12px;
+	}
+	nav .navbar-collapse ul li a.registro{
+		display: inline-block;
+		margin-left: 2px;
+	}
+	#hero{
+		text-align: center;
+	}
+	#hero img {
+		width: 100%;
+		right: 7%;
+	}
+	#hero .cont-foto:before{
+		left: -26%;
+		width: 140%
+	}
+	#cdestacadas h2{
+		text-align: center;
+		border-bottom: transparent;
+		position: relative;
+	}
+	#cdestacadas h2::after{
+		width: 0%;
+	}
+	footer{
+		padding: 20px;
+	}
+	footer img{
+		width: 150px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
